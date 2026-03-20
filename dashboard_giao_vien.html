@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Giáo viên - EduSlide Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#875200",
+              "tertiary-container": "#069dcf",
+              "primary-container": "#3595f3",
+              "on-secondary-fixed": "#2b1700",
+              "surface": "#f7f9fb",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "outline-variant": "#bfc7d4",
+              "secondary-fixed-dim": "#ffb865",
+              "primary": "#0060a8",
+              "on-surface-variant": "#404752",
+              "on-primary-fixed": "#001c38",
+              "inverse-on-surface": "#eff1f3",
+              "surface-container-low": "#f2f4f6",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#191c1e",
+              "background": "#f7f9fb",
+              "on-surface": "#191c1e",
+              "primary-fixed-dim": "#a2c9ff",
+              "surface-tint": "#0060a8",
+              "surface-container": "#eceef0",
+              "secondary-fixed": "#ffddba",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#001e2b",
+              "on-primary-fixed-variant": "#004881",
+              "surface-bright": "#f7f9fb",
+              "inverse-surface": "#2d3133",
+              "on-secondary-container": "#623a00",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#75d1ff",
+              "surface-container-high": "#e6e8ea",
+              "on-primary-container": "#002c51",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#d3e4ff",
+              "error-container": "#ffdad6",
+              "surface-dim": "#d8dadc",
+              "on-tertiary-container": "#002f41",
+              "tertiary-fixed": "#c2e8ff",
+              "tertiary": "#006688",
+              "on-error-container": "#93000a",
+              "outline": "#707883",
+              "secondary-container": "#f89c00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,96,168,0.06)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-blue-700 dark:text-blue-400 tracking-tighter">
+                EduSlide Pro
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Slide bài giảng</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Tool Game</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Bảng giá</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Hướng dẫn</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<div class="flex items-center space-x-2 p-1 pl-3 bg-surface-container rounded-full cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="text-sm font-semibold text-on-surface-variant">Giáo viên Mai</span>
+<span class="material-symbols-outlined text-primary" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</nav>
+<div class="pt-20 max-w-7xl mx-auto flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 hidden md:block p-6 sticky top-20 h-[calc(100vh-80px)]">
+<div class="space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 bg-primary-container text-on-primary-container font-bold rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared" style="font-variation-settings: 'FILL' 1;">folder_shared</span>
+<span class="text-sm">Kho slide của tôi</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-sm">Lịch sử mua hàng</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-sm">Thông tin tài khoản</span>
+</a>
+</div>
+<div class="mt-12 p-6 bg-surface-container-low rounded-2xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline font-bold text-sm text-primary mb-2">Gói Membership</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Nâng cấp để tải không giới hạn hàng ngàn slide cao cấp.</p>
+<button class="mt-4 px-4 py-2 bg-primary text-white text-xs font-bold rounded-full w-full hover:bg-primary/90 transition-colors">Nâng cấp ngay</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 md:p-8 bg-surface">
+<!-- Header Welcome -->
+<header class="mb-10">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Xin chào, Giáo viên Mai!</h1>
+<p class="text-on-surface-variant">Chào mừng bạn quay trở lại. Hôm nay bạn muốn chuẩn bị bài giảng gì?</p>
+</div>
+<div class="flex gap-2">
+<div class="relative">
+<input class="pl-10 pr-4 py-2.5 bg-surface-container-lowest border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 w-full md:w-64 shadow-sm" placeholder="Tìm kiếm slide của bạn..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-xl" data-icon="search">search</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Bento Grid - Features/Stats (Optional Visual Polish) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-primary text-white p-6 rounded-3xl relative overflow-hidden shadow-[0_20px_40px_rgba(0,96,168,0.1)]">
+<div class="relative z-10">
+<span class="text-4xl font-bold">12</span>
+<p class="text-sm opacity-80 mt-1">Slide đã sở hữu</p>
+</div>
+<span class="material-symbols-outlined absolute right-4 top-4 text-white/20 text-5xl" data-icon="menu_book">menu_book</span>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-6 rounded-3xl relative overflow-hidden">
+<div class="relative z-10">
+<span class="text-4xl font-bold">03</span>
+<p class="text-sm opacity-80 mt-1">Bài giảng mới tuần này</p>
+</div>
+<span class="material-symbols-outlined absolute right-4 top-4 text-black/10 text-5xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-between border border-outline-variant/10">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Dung lượng</p>
+<span class="text-xl font-bold">1.2 GB / 5 GB</span>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-primary/20 border-t-primary flex items-center justify-center">
+<span class="text-[10px] font-bold">24%</span>
+</div>
+</div>
+</div>
+<!-- Slides Grid -->
+<div class="mb-6 flex items-center justify-between">
+<h2 class="text-xl font-bold text-on-surface">Kho slide của tôi</h2>
+<button class="text-primary text-sm font-bold flex items-center hover:underline">
+                    Xem tất cả <span class="material-symbols-outlined text-sm ml-1" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Slide Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/10 flex flex-col">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern geometric slide template for science" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsUd_k7qdHQPh3EVy64IQpvDvg7d4Yq84FA2ALlyTl72o9QOycGfXM4Y-3y1a-_2IKrc_yvi82N7L0Yvfu4J6KepNQvpDUtnBrrz1BCTIuXb9UPABb7gJs2vfeAv-CQvF31MbNk3Z8Y0IOQzleAqLFisRpRyO3stchH0FSYsdSIzOLHaMuD5055Vd_AdcLNt7w3OQ49K5OXglW_C5Q8NLD33jOjGBe2IsqeK3Xd5WxEFigKYcjeOZtGQ49UaJfX4RGvC6mmC6vwDWQ"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded-md text-[10px] font-bold text-primary uppercase">Khoa học</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h3 class="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors">Hệ mặt trời và các hành tinh</h3>
+<p class="text-on-surface-variant text-xs mb-4 flex-1">32 slides • Định dạng PPTX • Kèm hiệu ứng chuyển cảnh 3D</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-container">
+<span class="text-[10px] text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="calendar_today">calendar_today</span>
+                                Mua ngày 12/10/2023
+                            </span>
+<button class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                                Tải về
+                            </button>
+</div>
+</div>
+</div>
+<!-- Slide Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/10 flex flex-col">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Soft colorful pastel education slides" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSCx_qyNfi6lepwkhp1PG3wkXL6DeYAkPT5tFuJQeLIYK68XEi3HzeYLL8WkP6W16egipydsHTLaf4VE6OhrK6NTYJeYE1-mOlRD_YE--A5qfBYCjDrF6Kw2ekPusCuwuEowG0u5Nw4rO5mVZI0Le2gpDyGF11ukKavKJTvb_RhSrhdKSFIMYN0Gqf5tPTZvWoUt0YBSoUP0tF_WvU34FHO-z114Xgn-SPpUp6BTFPyWfEphyOdi81HHGE48pwr_t23uR83za-HdBc"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded-md text-[10px] font-bold text-primary uppercase">Toán học</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h3 class="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors">Giải toán đố vui tiểu học</h3>
+<p class="text-on-surface-variant text-xs mb-4 flex-1">24 slides • Định dạng PPTX • Tích hợp Game tương tác</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-container">
+<span class="text-[10px] text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="calendar_today">calendar_today</span>
+                                Mua ngày 05/11/2023
+                            </span>
+<button class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                                Tải về
+                            </button>
+</div>
+</div>
+</div>
+<!-- Slide Card 3 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/10 flex flex-col">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artistic historical presentation template" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLndusE6YuZv8aezYClgkpl5FCHGiunmv8rrJeR1xylFYX93z3vHvIA0hfJcYFPCbMf2Yyih1hXi5WUaHnOkNzCCY8oGpyDT9uKhAiCG1L9fC3FFu9-u1K5hGLZ7UB0_n1tiUQwIqnmcRsvpnbA_WPqqv27Lag5T-LFp9-d3eLbd1trw915zMDd9GSz0YF0QjXSpPTczmrwdTvF19LAJiv9ih2-rthYTJBQZIjj8ih4V0AP5EjAMC7jWGZRBsS0Z-YlT0CArecgGMQ"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded-md text-[10px] font-bold text-primary uppercase">Lịch sử</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h3 class="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors">Hành trình lịch sử Việt Nam</h3>
+<p class="text-on-surface-variant text-xs mb-4 flex-1">45 slides • Định dạng PPTX • Hình ảnh 4K độ phân giải cao</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-container">
+<span class="text-[10px] text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="calendar_today">calendar_today</span>
+                                Mua ngày 15/11/2023
+                            </span>
+<button class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                                Tải về
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State / Add New Hint -->
+<div class="mt-12 p-8 border-2 border-dashed border-outline-variant/30 rounded-3xl flex flex-col items-center justify-center text-center bg-surface-container-low/50">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-full flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add_to_photos">add_to_photos</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Muốn thêm nhiều bài giảng thú vị?</h4>
+<p class="text-on-surface-variant text-sm mb-6 max-w-sm">Khám phá hàng ngàn mẫu slide bài giảng mới được cập nhật hàng ngày bởi cộng đồng giáo viên.</p>
+<button class="bg-surface-container-highest text-primary px-6 py-2.5 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-all">Đến cửa hàng EduSlide</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto font-['Manrope'] text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-black text-slate-800 dark:text-slate-100 mb-4">EduSlide Pro</div>
+<p class="text-slate-500 dark:text-slate-400">© 2024 EduSlide Pro - Nâng tầm bài giảng Việt.</p>
+</div>
+<div>
+<h5 class="font-bold text-slate-800 dark:text-slate-100 mb-4">Dịch vụ</h5>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-orange-500 transition-colors" href="#">Slide bài giảng</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Tool Game giáo dục</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Thiết kế theo yêu cầu</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-800 dark:text-slate-100 mb-4">Hỗ trợ</h5>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-orange-500 transition-colors" href="#">Hướng dẫn sử dụng</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Liên hệ hỗ trợ</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Cộng đồng giáo viên</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-800 dark:text-slate-100 mb-4">Pháp lý</h5>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-orange-500 transition-colors" href="#">Điều khoản sử dụng</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Chính sách bảo mật</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom NavBar (Visible only on mobile) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg border-t border-outline-variant/20 flex justify-around items-center py-3 z-50">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared" style="font-variation-settings: 'FILL' 1;">folder_shared</span>
+<span class="text-[10px] font-bold mt-1">Kho slide</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] mt-1">Khám phá</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] mt-1">Lịch sử</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] mt-1">Cá nhân</span>
+</a>
+</div>
+
+<!-- MAPPING SCRIPT INJECTED -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const matches = (text, keywords) => {
+        if (!text) return false;
+        text = text.toLowerCase();
+        return keywords.some(kw => text.includes(kw));
+    };
+
+    const clickables = document.querySelectorAll('a, button, [role="button"]');
+    clickables.forEach(el => {
+        // Add cursor pointer for better UX
+        if (el.tagName !== 'BUTTON' && el.tagName !== 'A') {
+            el.style.cursor = 'pointer';
+        }
+
+        el.addEventListener('click', (e) => {
+            const text = el.innerText || el.textContent || '';
+            const ariaLabel = el.getAttribute('aria-label') || '';
+            const iconText = el.querySelector('.material-symbols-outlined') ? el.querySelector('.material-symbols-outlined').innerText : '';
+            const combinedText = (text + ' ' + ariaLabel + ' ' + iconText).toLowerCase();
+            
+            // Skip actual links that aren't '#'
+            if (el.tagName === 'A' && el.getAttribute('href') && el.getAttribute('href') !== '#' && !el.getAttribute('href').startsWith('javascript:')) {
+                return;
+            }
+
+            let targetUrl = '';
+
+            // Mapping Logic Priority
+            if (matches(combinedText, ['quản trị', 'admin', 'cấu hình', 'hệ thống'])) {
+                targetUrl = 'dashboard_quan_tri.html';
+            } else if (matches(combinedText, ['giáo viên', 'instructor', 'dạy học', 'account_circle'])) {
+                targetUrl = 'dashboard_giao_vien.html';
+            } else if (matches(combinedText, ['trang chủ', 'home', 'eduslide', 'eduplay', 'logo'])) {
+                targetUrl = 'eduplay_landing_page_illustrated_style.html';
+            } else if (matches(combinedText, ['shopping_cart', 'giỏ hàng', 'thanh toán', 'mua ngay', 'đăng ký', 'cart', 'checkout', 'add_shopping_cart', 'bảng giá', '199.000', 'đ'])) {
+                targetUrl = 'gio_hang_thanh_toan.html';
+            } else if (matches(combinedText, ['chi tiết', 'xem ngay', 'học thử', 'vào học'])) {
+                targetUrl = 'chi_tiet_san_pham.html';
+            } else if (matches(combinedText, ['danh mục', 'sản phẩm', 'xem thêm', 'khoá học', 'khám phá', 'explore', 'tất cả', 'thư viện', 'slide bài giảng', 'toán học', 'khoa học', 'lịch sử', 'tiếng anh', 'từ vựng', 'tư duy', 'địa lý', 'ngữ văn'])) {
+                targetUrl = 'danh_muc_san_pham.html';
+            }
+            
+            if (targetUrl) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = targetUrl;
+            }
+        });
+    });
+    
+    // Make cards clickable and navigate to chi_tiet_san_pham.html
+    const cards = document.querySelectorAll('.group.bg-surface-container-lowest, .card-item, .flex.flex-col.gap-8.items-center');
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('button') || e.target.closest('a')) return;
+            window.location.href = 'chi_tiet_san_pham.html';
+        });
+        card.style.cursor = 'pointer';
+    });
+});
+</script>
+
+</body></html>

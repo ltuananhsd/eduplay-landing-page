@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduSlide Pro - Nâng tầm bài giảng Việt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#eff1f3",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#a2c9ff",
+              "on-secondary-container": "#623a00",
+              "surface-dim": "#d8dadc",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "outline": "#707883",
+              "secondary-container": "#f89c00",
+              "secondary-fixed": "#ffddba",
+              "secondary": "#875200",
+              "on-tertiary-container": "#002f41",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "tertiary": "#006688",
+              "on-surface": "#191c1e",
+              "on-error-container": "#93000a",
+              "on-background": "#191c1e",
+              "on-tertiary-fixed": "#001e2b",
+              "inverse-surface": "#2d3133",
+              "tertiary-fixed": "#c2e8ff",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#069dcf",
+              "primary-container": "#3595f3",
+              "on-primary-fixed": "#001c38",
+              "surface-container-low": "#f2f4f6",
+              "tertiary-fixed-dim": "#75d1ff",
+              "primary": "#0060a8",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed-variant": "#663d00",
+              "surface": "#f7f9fb",
+              "inverse-primary": "#a2c9ff",
+              "on-primary-container": "#002c51",
+              "error-container": "#ffdad6",
+              "surface-bright": "#f7f9fb",
+              "secondary-fixed-dim": "#ffb865",
+              "on-primary-fixed-variant": "#004881",
+              "surface-tint": "#0060a8",
+              "on-error": "#ffffff",
+              "surface-container": "#eceef0",
+              "background": "#f7f9fb",
+              "on-surface-variant": "#404752",
+              "outline-variant": "#bfc7d4",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary-fixed-variant": "#004d67",
+              "primary-fixed": "#d3e4ff",
+              "on-secondary-fixed": "#2b1700"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,96,168,0.06)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-blue-700 dark:text-blue-400 tracking-tighter">EduSlide Pro</div>
+<div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="#">Slide bài giảng</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Tool Game</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Bảng giá</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Hướng dẫn</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface-variant">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative flex items-center min-h-[90vh] overflow-hidden px-6 py-24 -mt-24">
+<div class="absolute inset-0 z-0">
+<video src="https://pixabay.com/videos/download/video-341202_source.mp4" autoplay loop muted playsinline class="w-full h-full object-cover opacity-100"></video>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto mt-16">
+<div class="md:w-[55%] lg:w-1/2 space-y-8 bg-white/[.15] dark:bg-slate-900/[.15] p-8 md:p-10 rounded-[2.5rem] backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] border border-white/20">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full text-primary font-extrabold text-sm shadow-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        Giải pháp giáo dục 4.0
+                    </div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] text-on-surface">
+                        Biến tiết học thành <span class="text-primary">cuộc phiêu lưu</span> kỳ thú
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-lg">
+                        Thư viện slide game tương tác và công cụ giảng dạy chuyên nghiệp giúp học sinh say mê, giáo viên nhàn tênh.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                            Khám phá ngay
+                        </button>
+<button class="px-8 py-4 bg-white/50 text-primary font-bold rounded-full hover:bg-white/80 transition-all active:scale-95 border border-primary/10">
+                            Xem bản dùng thử
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Bento Grid -->
+<section class="bg-surface-container-low py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-3xl md:text-4xl font-bold text-on-surface">Tại sao chọn EduSlide Pro?</h2>
+<p class="text-on-surface-variant">Nâng cấp trải nghiệm giảng dạy với những tính năng ưu việt</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_rgba(0,96,168,0.04)] md:col-span-2">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 space-y-4">
+<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h3 class="text-2xl font-bold">Tiết kiệm 80% thời gian</h3>
+<p class="text-on-surface-variant">Không còn những đêm thức trắng soạn giáo án. Chỉ cần tải về và bắt đầu buổi dạy đầy hứng khởi.</p>
+</div>
+<img class="w-full md:w-64 rounded-2xl object-cover" data-alt="Stylized clock with educational icons symbolizing efficiency and time-saving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgVcPLBATsobmnswXniO928Cp_7KIWY2ZVEHejGbz1BDKibsc0zAj6gINSwnbMUdFMPPHrgNdCLa-_dH56sRyYNlMs-vTojmugQM0q7ylcacRyzCnGRkc_lS_rnmOZtluin9tGVelmHlrwvS-Uqhq6E4TKiUNN2Wx-kRxWWU2UL4AsUUKT6YnjjpA7FrrWvla8yuJqoIKr3P1rrp-U1qlWSqgw24DenT3jSSSd5zpbDWu5y7mG_1vLfm8cW4tqWQeu-yR7n10tz6PS"/>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-3xl text-on-primary flex flex-col justify-between">
+<span class="material-symbols-outlined text-5xl">diversity_3</span>
+<div class="mt-12 space-y-2">
+<h3 class="text-2xl font-bold">Cộng đồng 50.000+</h3>
+<p class="text-primary-fixed-dim">Giáo viên trên khắp Việt Nam tin dùng mỗi ngày.</p>
+</div>
+</div>
+<div class="bg-secondary-container p-8 rounded-3xl text-on-secondary-container">
+<span class="material-symbols-outlined text-4xl">verified</span>
+<h3 class="mt-6 text-xl font-bold">Nội dung chuẩn</h3>
+<p class="mt-2 text-on-secondary-container/80">Bám sát chương trình giáo dục phổ thông mới của Bộ Giáo dục.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_rgba(0,96,168,0.04)] md:col-span-2">
+<div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+<div class="flex-1 space-y-4 text-right">
+<div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary ml-auto">
+<span class="material-symbols-outlined text-3xl">extension</span>
+</div>
+<h3 class="text-2xl font-bold">Tương tác đa dạng</h3>
+<p class="text-on-surface-variant">Hơn 100+ mẫu trò chơi từ giải đố, đua xe đến thám hiểm không gian.</p>
+</div>
+<img class="w-full md:w-64 rounded-2xl object-cover" data-alt="Playful puzzle pieces and game controllers in a vibrant 3D style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTgNu6NqzpG3f3-E5plVgMpnNqU9kTptGHz5AqXJav-EeYvLsnWrIy3QH7bGKJzLbYGG8D7fQSVG2aaDIoIBHzvWpkSBBhW7NiOQGZckzAm3tIKG4uz6syZXpphHinTApqvD9Qf6Df_nvDmsSppVwaMB-Il3lw7-UilbDvW2OcPJDfuHgQAD4ZQRgfIokmkVvFOMAGps88EZbgElfsI-_otgtK33ZEAESyJjRwX2GmPXxGyLee3ViuINbaPn2fKdNqGANGp9GswQV1"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide Trò Chơi Nổi Bật -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<h2 class="text-3xl md:text-5xl font-black text-on-surface tracking-tight">Slide Trò Chơi Nổi Bật</h2>
+<p class="text-on-surface-variant text-lg">Khám phá bộ sưu tập slide được yêu thích nhất tháng này</p>
+</div>
+<div class="flex gap-2">
+<button class="p-3 bg-surface-container text-on-surface rounded-full hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-3 bg-surface-container text-on-surface rounded-full hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card 1: Toán học -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Colorful cartoon math characters and numbers in a playful world" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS5-4T_L60f39NKWXYAD4kOPl0zlJIQiyNvQg6MenMqagurVDQDFXKqcndmkTBEvnXfKhpAg_32e8SC6IXpnxbFkAcM_OV44syxmYOYMmVG4zoFb7UOaqIlu8kkWgCMESvWVtnGnwfKpwZZ4vIh9mZw1Z-2CBgXTnVY-nrFalGAalXR_27ste9Aq7bdTjnAIzC5Q8OIaMWvknf_AnEB2Z4XtkKY4AESWIw4KoPlpHW4CUOjDBxKA2tJl-dH_2uR2-4APyVDLWq0Pu0"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-primary">TOÁN HỌC</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Vương Quốc Số Học</h3>
+<p class="text-sm text-on-surface-variant mb-4">Trò chơi tính nhẩm nhanh với cốt truyện thám hiểm.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">199.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Khoa học -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Cute laboratory characters with bubbling beakers and planetary models" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdxjj3OlhNakchu8ryDCWa4omveXrc8YDK7imqYQNZweZ6PhAtkpX4gFcYKZ1_fTGzkHifCpb6x6CuXZzPWpoFCgw5QgLw8nFvyxbUXKrVxRIYQkFVW8ULDCFZHTT46ggPtt8JnxuUEvZPbYAUDl63-ovcDnah6XV_4E9d4Bqv-cBgaBVReoFrhr93oe9nrRzulbvZ2_7VD6hIgTVn_wTxkJ9gRxS4fKIWTouj4ngKlwxPzyeJCJBkk--H4J7zqrVWnNK_pCjJinnq"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-tertiary">KHOA HỌC</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Nhà Khoa Học Nhí</h3>
+<p class="text-sm text-on-surface-variant mb-4">Khám phá thế giới vi sinh và vũ trụ qua các minigame.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">250.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Lịch sử -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Stylized illustrations of ancient Vietnamese kings and traditional pagodas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXI8zJiLjwLrh45i7UeU9AKZALzhNRtH17H8SPYaHOVP6qInjtfOVeyfdybq7sxhfHHr7-r-uZ52shKUqBTA-XMce8ChZFVBLkqSagNl-VaAJWjD4oo7rDkFE7wX-WxMFXVEB1Yh4T0RQahR4QKXjenx1QiWnZo6iR6XMLeu5K_87qDD-om-UQX1di-1VQnp5R1lf2WVuUIk_VftA4Ld3TfU9BeX2-sMCcEgE2KC_oPyN3X5DyR0yOr8XM6rNaMeHsykjNb9wYC4tH"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-orange-600">LỊCH SỬ</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Hành Trình Thời Gian</h3>
+<p class="text-sm text-on-surface-variant mb-4">Tìm hiểu lịch sử Việt Nam qua các cột mốc hào hùng.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">220.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Tiếng Anh -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Fun cartoon characters with speech bubbles showing English words and flags" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIS7q8UYCUKORgd2oxfNKSqMg4LkkNtX_QyUJFyHIrYgVQguCIgg27igbM0ysYmUaUSZs-Gu8r3hFJbIa0VLqFZGT82cGvRux2sEPzxYNMfC2gm_sNWwfAnOjtJvolMVq-5i41N9TODCQNYgwtm27_b4wYBURk1dgJdB_Z8Q5mL5pMZVt3n2JmTtk0J6WR24aA4JlCXtQSkFQQsHVYGJ-BaiHqRwStS7syeL_ExCtYVciH2yUhAb59i3yvYLKln3jVNyZvggudohkf"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-blue-600">TIẾNG ANH</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">English Adventure</h3>
+<p class="text-sm text-on-surface-variant mb-4">Luyện giao tiếp và ngữ pháp qua các thử thách đồng đội.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">180.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Từ vựng -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Exploding alphabet letters and bright colors in a vocabulary game theme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DzYIe45bdHNJKFn3wLkjorSR9nSOEagsFKIRW6HqeNHeQWJ99k8n5a-dH2Olcg7nB4xBg7NToa5TVZ2X1XNonynYu7bmy62KC21MZXmFq6jbXeUVH-ej22Cg-1P-nKstIUSBvqt8Xe7SCzwTN_oIP_rgQrlSZQFfvwonjWEFljyUaHCZao1yWIHltpPoZrAanzK7Wg37JdTYcyo5Du-PetfMDh1aof4O0rHOoaJksS3PBZA1qOhB_epquSpcUeAPHW-7XVXFAJYG"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-purple-600">TỪ VỰNG</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Đấu Trường Chữ Cái</h3>
+<p class="text-sm text-on-surface-variant mb-4">Học từ vựng tiếng Việt qua các câu đố đuổi hình bắt chữ.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">150.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Tư duy -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Brain puzzle illustration with bright neon glow and geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGmLs01kxFoF2EAwDdoqnrLXncwtbyqXPBNtQxz0yybwMUkB38ljVpSR2MIGdQGgwHvUNvXTO_rPXGk4NGhql1UTP0h8BV4nwAHG5t23JDkBTyCydscJWfViIw_kdrc2Rjqi6G6lfN1EqRJ-kUzQp8tr_-TbUh8d-NS2MX6j1dr0hccIjdsCWxj_K9-_Qk1qNvB4FhbKQ2MCTu6CPIgcifvuWsrBSNz1q9DbHyLY0Bl5wGE06H04Gd8OhQjF4rRCxhfWRSG0MYooY7"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-emerald-600">TƯ DUY</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Thử Thách Logic</h3>
+<p class="text-sm text-on-surface-variant mb-4">Các bài toán logic kinh điển được thiết kế dưới dạng game.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">210.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 7: Địa lý -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Cute globe with famous landmarks from around the world in cartoon style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE2N8dNSiUton_WeILRkNhWRo3zygOlcr7HorYQjWZ2eBBzUvfpBeNwdIJa2Ifz0M9vJ2hF7zLZ9j0ziAd2dEMwO-wnJ-5hftO9IjK5cfdBDlX6Mfbk2QuJCzUB8sMMKYa4usENKAHCl2ENAOGEJnhFlbavFO8fouQPXe7jRoPfucN5f2tYgWrMv6qFbJwqGxKSSyzP--dgE3fa0GPQU5TnFzbaJ7brY_S9dWKrTMH8rR99EXa3-pUMTdVFCeomMM_BiHHJNBi-KfQ"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-teal-600">ĐỊA LÝ</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Vòng Quanh Thế Giới</h3>
+<p class="text-sm text-on-surface-variant mb-4">Khám phá năm châu bốn biển qua bản đồ tương tác.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">190.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 8: Ngữ văn -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Traditional Vietnamese ink wash style cartoon with scrolls and pens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAJTHw8Fb8fDgmChi9CvvVRVFiUQ_xjbJQaHG_iYYiChJBzsxhIUnDH00rnXfYRme4box1PD1dkzYq74IW1ky7ZPSPEGMCYD_2X_NVGcf45c_wvx5V4AEveL-tXp0Ofdt6ChQTn2ugo7pdUD3PnxdfF1QJmZpTyUHrKj4RqgPItPg9paCni4trpt_NnTdXXLC_BglpjSXBQMZgKGQmo-NfKH0C7UY9Z0eRkKa9zieEn1pJRKLYnL7qL19pW8PERL_bY_iYnfpVGjyl"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-pink-600">NGỮ VĂN</div>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2">Khu Vườn Văn Học</h3>
+<p class="text-sm text-on-surface-variant mb-4">Phân tích tác phẩm và nhân vật qua game nhập vai.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">230.000đ</span>
+<button class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="px-10 py-4 bg-surface-container-high text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all">
+                    Xem toàn bộ thư viện (500+)
+                </button>
+</div>
+</section>
+<!-- Community & Testimonials -->
+<section class="bg-primary-container/10 py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-black text-on-surface leading-tight">Gia nhập cộng đồng giáo viên năng động</h2>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 bg-white rounded-3xl shadow-sm border border-primary/5">
+<div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Teacher 1" data-alt="Portrait of a smiling young teacher in a modern setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3RsNWEcXofDxmZa8OBao8s_4jymhDFsnxvfh2BPLcBjfgf6_mL4yWyik_tm6fbo7cPGNrLxvwPVDb-xlwgv4MxLmFnHTvho2UcAHeay1ebOPmCjXhAOC9ea1ulH8ZO1qozvEVnJ4MGd8fhGby3JWhn9OTgxsTPxQIITPhq0hHJCBdWrfKtWQ0GBv2--m1Pdu0G4PWZpwndhQyH1DEGRREXPcyzkDd-ue9AS4IxHKd9Tleb0l_mlbTuN5U8J-r3wMM9wXBk2j1M5YA"/>
+</div>
+<div class="space-y-1">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"Từ khi dùng EduSlide, học sinh của tôi hào hứng hơn hẳn. Các em luôn mong chờ đến giờ học để được chơi game."</p>
+<p class="text-sm font-bold">— Cô Minh Anh, GV Tiểu học</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-white rounded-3xl shadow-sm border border-primary/5">
+<div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Teacher 2" data-alt="Professional teacher working in a brightly lit digital classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX5s17nctUpFaT33h_-uY-PB3siauLgrRutX9Fn_WvDAbD_iRxzdeUlNpn5KC3FDZ4A5txtr84w0q5ocQbmqS6bXvzB7O7aCc4HPg9H92Yq8Ftcij0OQ-37kLnQ5b6pWKGGDeG5wj4_-LQadl-AbndUIj7Gt87opE3JTUISVwA9-KK5GsKj4Qb8JgxPnB-AY8oqleu8EFizxq8GPoSkM23dE14Rw_28cLmGb4BoD_MeZV-LYnqYDUP7EJimi0IMUSnW6F0vDWWpV71"/>
+</div>
+<div class="space-y-1">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"Các công cụ game cực kỳ dễ sử dụng. Tôi có thể tùy chỉnh câu hỏi chỉ trong vài phút."</p>
+<p class="text-sm font-bold">— Thầy Hoàng Nam, GV THCS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="rounded-3xl translate-y-8" data-alt="Teachers collaborating in a brightly colored creative workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ouZLTooDZyyOSjKSZTBCHKf0w37bhPV-O2OXLlMO7xjq0vbZqfvY_NQ34Jxu1IXmNdcx7qsIjm-jAMRWoXjUWvJ4p8_ScWYVipVzu7-az30n8ZC-Ws_DybY4Ytm1aH_1ejKJqN3vqozqgyT8qCGi2mfQiog5Qan5g_1XDQ-6gFowdTcXc41Cmr4gpzpt2P5-l9EvWQmjjqrD88NK0JWK_WafLtCH9B43SOLdEDRG9EFpTcQDINtgw05eyXW3W2wQnQElJnriSfJ4"/>
+<img class="rounded-3xl" data-alt="Engaged students interacting with digital whiteboard games" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz2-idY4aNHy7-6roLvkqOUU1fr9yMQ3b0QcCC99Mp5947SWdXzOeAzyA-XCAJrhPCIwdGE8a4VDk30-AhVXPNqyFBa5ot1j6PWPu8hIMXt3v2OPUfKQBpZsIl-sH8Y9X4ArHwPEjdHgcsnP0RlTOmQNEWD2Jpqx0nersiUD7bQnf3pSsjqWSvcjXIhxsDHUOoCE-hFt10TGhkhBNTXJeOa_Y0T6f2_cT_TZtYr3Aphv3qgGSfn-zdCmm9MmyT5e6Qe76SeGreP_Yb"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto font-['Manrope'] text-sm leading-relaxed">
+<div class="space-y-4">
+<div class="text-lg font-black text-slate-800 dark:text-slate-100">EduSlide Pro</div>
+<p class="text-slate-500 dark:text-slate-400">Nâng tầm bài giảng Việt qua công nghệ và sự sáng tạo. Chúng tôi đồng hành cùng giáo viên trong kỷ nguyên số.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="text-slate-400 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined">youtube_activity</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider text-xs">Sản phẩm</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Slide bài giảng</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Tool Game tương tác</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Mẫu Canva giáo dục</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Học liệu số</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider text-xs">Hỗ trợ</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Về chúng tôi</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Điều khoản sử dụng</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Liên hệ hỗ trợ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider text-xs">Cộng đồng</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Cộng đồng giáo viên</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Blog giáo dục</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors" href="#">Sự kiện &amp; Workshop</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-xs">© 2024 EduSlide Pro - Nâng tầm bài giảng Việt.</p>
+<div class="flex gap-6">
+<span class="text-xs text-slate-400">Language: Tiếng Việt</span>
+<span class="text-xs text-slate-400">Currency: VND</span>
+</div>
+</div>
+</footer>
+<!-- FAB for focused action -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</button>
+
+<!-- MAPPING SCRIPT INJECTED -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const matches = (text, keywords) => {
+        if (!text) return false;
+        text = text.toLowerCase();
+        return keywords.some(kw => text.includes(kw));
+    };
+
+    const clickables = document.querySelectorAll('a, button, [role="button"]');
+    clickables.forEach(el => {
+        // Add cursor pointer for better UX
+        if (el.tagName !== 'BUTTON' && el.tagName !== 'A') {
+            el.style.cursor = 'pointer';
+        }
+
+        el.addEventListener('click', (e) => {
+            const text = el.innerText || el.textContent || '';
+            const ariaLabel = el.getAttribute('aria-label') || '';
+            const iconText = el.querySelector('.material-symbols-outlined') ? el.querySelector('.material-symbols-outlined').innerText : '';
+            const combinedText = (text + ' ' + ariaLabel + ' ' + iconText).toLowerCase();
+            
+            // Skip actual links that aren't '#'
+            if (el.tagName === 'A' && el.getAttribute('href') && el.getAttribute('href') !== '#' && !el.getAttribute('href').startsWith('javascript:')) {
+                return;
+            }
+
+            let targetUrl = '';
+
+            // Mapping Logic Priority
+            if (matches(combinedText, ['quản trị', 'admin', 'cấu hình', 'hệ thống'])) {
+                targetUrl = 'dashboard_quan_tri.html';
+            } else if (matches(combinedText, ['giáo viên', 'instructor', 'dạy học', 'account_circle'])) {
+                targetUrl = 'dashboard_giao_vien.html';
+            } else if (matches(combinedText, ['trang chủ', 'home', 'eduslide', 'eduplay', 'logo'])) {
+                targetUrl = 'eduplay_landing_page_illustrated_style.html';
+            } else if (matches(combinedText, ['shopping_cart', 'giỏ hàng', 'thanh toán', 'mua ngay', 'đăng ký', 'cart', 'checkout', 'add_shopping_cart', 'bảng giá', '199.000', 'đ'])) {
+                targetUrl = 'gio_hang_thanh_toan.html';
+            } else if (matches(combinedText, ['chi tiết', 'xem ngay', 'học thử', 'vào học'])) {
+                targetUrl = 'chi_tiet_san_pham.html';
+            } else if (matches(combinedText, ['danh mục', 'sản phẩm', 'xem thêm', 'khoá học', 'khám phá', 'explore', 'tất cả', 'thư viện', 'slide bài giảng', 'toán học', 'khoa học', 'lịch sử', 'tiếng anh', 'từ vựng', 'tư duy', 'địa lý', 'ngữ văn'])) {
+                targetUrl = 'danh_muc_san_pham.html';
+            }
+            
+            if (targetUrl) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = targetUrl;
+            }
+        });
+    });
+    
+    // Make cards clickable and navigate to chi_tiet_san_pham.html
+    const cards = document.querySelectorAll('.group.bg-surface-container-lowest, .card-item, .flex.flex-col.gap-8.items-center');
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('button') || e.target.closest('a')) return;
+            window.location.href = 'chi_tiet_san_pham.html';
+        });
+        card.style.cursor = 'pointer';
+    });
+});
+</script>
+
+</body></html>
